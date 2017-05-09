@@ -21,7 +21,7 @@ class Tag(models.Model):
 class PublicBookmarkManager(models.Manager):
     def get_queryset(self):
         qs = super(PublicBookmarkManager, self).get_queryset()
-        return sq.filter(is_public=True)
+        return qs.filter(is_public=True)
 
 @python_2_unicode_compatible
 class Bookmark(models.Model):
